@@ -1,0 +1,7 @@
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
