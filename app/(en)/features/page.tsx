@@ -49,15 +49,15 @@ export default function FeaturesPage() {
           </p>
         </header>
 
-        <section className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pillars.map((pillar) => (
             <article
               key={pillar.slug}
-              className="rounded-xl border border-border bg-surface p-7 flex flex-col shadow-card"
+              className="group rounded-2xl border border-border bg-surface p-5 flex flex-col shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row gap-5 h-full">
-                <div className="md:w-[55%] flex-shrink-0 order-2 md:order-1">
-                  <div className="relative w-full aspect-[16/10] rounded-lg border border-border bg-surface-2 overflow-hidden">
+              <div className="flex flex-col gap-4 h-full">
+                <div className="w-full">
+                  <div className="relative w-full aspect-[16/10] rounded-xl border border-border bg-surface-2 overflow-hidden">
                     <Image
                       src={
                         pillar.thumbnail ||
@@ -66,38 +66,46 @@ export default function FeaturesPage() {
                       }
                       alt={pillar.title}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       unoptimized
                     />
                   </div>
                 </div>
-                <div className="flex-1 order-1 md:order-2">
-                  <h2 className="font-dm font-semibold text-lg text-text-primary mb-2">
+
+                <div className="flex-1 flex flex-col">
+                  <h2 className="font-dm font-bold text-xl text-text-primary mb-2 line-clamp-1">
                     {pillar.title}
                   </h2>
-                  <p className="text-text-secondary text-base leading-relaxed mb-3">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
                     {pillar.heroSubheading}
                   </p>
-                  <ul className="space-y-2 text-base text-text-primary leading-relaxed">
+
+                  <ul className="space-y-2 mt-auto text-sm text-text-primary leading-relaxed mb-6">
                     {pillar.painBullets.slice(0, 1).map((p) => (
-                      <li key={p}>
-                        <span className="text-red mr-1">•</span>
-                        {p}
+                      <li key={p} className="flex items-start gap-2">
+                        <span className="text-red mt-0.5 flex-shrink-0">✕</span>
+                        <span className="line-clamp-2">{p}</span>
                       </li>
                     ))}
-                    {pillar.solutionBullets.slice(0, 2).map((s) => (
-                      <li key={s}>
-                        <span className="text-green mr-1">•</span>
-                        {s}
+                    {pillar.solutionBullets.slice(0, 1).map((s) => (
+                      <li key={s} className="flex items-start gap-2">
+                        <span className="text-green mt-0.5 flex-shrink-0">✓</span>
+                        <span className="line-clamp-2">{s}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={`/features/${pillar.slug}`}
-                    className="mt-4 inline-flex items-center text-primary text-sm font-medium hover:underline"
-                  >
-                    See how this works →
-                  </Link>
+
+                  <div className="mt-auto pt-4 border-t border-border/50">
+                    <Link
+                      href={`/features/${pillar.slug}`}
+                      className="flex items-center justify-center gap-2 w-full bg-surface-2 hover:bg-primary hover:text-white text-text-primary border border-border px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300"
+                    >
+                      View Features Details
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </article>
