@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+HexaBill Marketing Site — [hexamarketing.com](https://hexamarketing.com). Next.js 14, Gulf-first, high conversion.
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full project architecture and [CONTRIBUTING.md](CONTRIBUTING.md) for branch strategy (a/ for Anandu, s/ for Surag).
 
 ## Getting Started
 

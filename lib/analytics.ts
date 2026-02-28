@@ -34,4 +34,6 @@ export const track = {
   navPricingClicked: () => posthog.capture("nav_pricing_clicked"),
   locationPageViewed: (city: string) =>
     posthog.capture("location_page_viewed", { city }),
+  featuresDetailCtaClicked: (slug: string, type: "demo" | "whatsapp") =>
+    posthog.capture("features_detail_cta_clicked", { slug, type }),
 };

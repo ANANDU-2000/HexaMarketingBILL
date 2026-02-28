@@ -11,6 +11,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        bg: "var(--color-bg)",
+        "bg-alt": "var(--color-bg-alt)",
+        "bg-tint": "var(--color-bg-tint)",
+        "blue-light": "var(--color-blue-light)",
+        primary: "var(--color-primary)",
+        "primary-dark": "var(--color-primary-dark)",
+        accent: "var(--color-accent)",
         navy: "var(--color-navy)",
         "navy-2": "var(--color-navy-2)",
         "navy-3": "var(--color-navy-3)",
@@ -35,6 +42,23 @@ const config: Config = {
       },
       animation: {
         "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+        "slide-up": "slideUp 0.5s ease-out forwards",
+        "pulse-soft": "pulseSoft 2s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        slideUp: {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        pulseSoft: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.85" },
+        },
       },
       boxShadow: {
         cyan: "var(--shadow-cyan)",
