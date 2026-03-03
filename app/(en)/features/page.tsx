@@ -57,18 +57,20 @@ export default function FeaturesPage() {
             >
               <div className="flex flex-col gap-4 h-full">
                 <div className="w-full">
-                  <div className="relative w-full aspect-[16/10] rounded-xl border border-border bg-surface-2 overflow-hidden">
-                    <Image
-                      src={
-                        pillar.thumbnail ||
-                        pillar.desktopScreenshot ||
-                        pillar.screenshot
-                      }
-                      alt={pillar.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      unoptimized
-                    />
+                  <div className="relative w-full aspect-[16/10] rounded-xl border border-border bg-surface-2 overflow-hidden p-2">
+                    <div className="relative w-full h-full rounded-lg overflow-hidden">
+                      <Image
+                        src={
+                          pillar.thumbnail ||
+                          pillar.desktopScreenshot ||
+                          pillar.screenshot
+                        }
+                        alt={pillar.title}
+                        fill
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
+                        unoptimized
+                      />
+                    </div>
                   </div>
                 </div>
 

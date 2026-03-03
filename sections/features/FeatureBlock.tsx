@@ -14,21 +14,29 @@ export function FeatureBlock({ feature, reverse = false }: FeatureBlockProps) {
   return (
     <div
       id={`feature-${feature.id}`}
-      className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center py-20 ${
-        reverse ? "md:grid-flow-dense" : ""
-      }`}
+      className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center py-20 ${reverse ? "md:grid-flow-dense" : ""
+        }`}
     >
       <div className={reverse ? "md:col-start-2" : ""}>
-        <div className="relative rounded-xl overflow-hidden border border-border shadow-card">
-          <div className="aspect-[3/2] max-h-[420px] bg-surface relative">
-            <Image
-              src={feature.screenshot}
-              alt={feature.title}
-              width={600}
-              height={400}
-              className="object-cover w-full h-full"
-              unoptimized
-            />
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl group border border-border/40">
+          <div className="relative w-full rounded-xl flex flex-col overflow-hidden bg-surface shadow-md">
+            {/* Browser-like header */}
+            <div className="h-8 bg-surface-2 border-b border-border/50 flex items-center px-4 gap-2 shrink-0 w-full">
+              <div className="w-2.5 h-2.5 rounded-full bg-red/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-gold/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-green/80"></div>
+            </div>
+            {/* Image content */}
+            <div className="relative w-full bg-surface overflow-hidden">
+              <Image
+                src={feature.screenshot}
+                alt={feature.title}
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-in-out"
+                unoptimized
+              />
+            </div>
           </div>
         </div>
       </div>
