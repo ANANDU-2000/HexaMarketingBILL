@@ -2,6 +2,8 @@ import { Hero } from "@/sections/hero";
 import { PainSection } from "@/sections/pain";
 import { SolutionSection } from "@/sections/solution";
 import { FeatureSection } from "@/sections/features";
+import { BenefitsSection } from "@/sections/benefits";
+import { AudienceSection } from "@/sections/audience";
 import { RoleSection } from "@/sections/roles";
 import { ProofSection } from "@/sections/proof";
 import { PricingSection } from "@/sections/pricing";
@@ -12,11 +14,12 @@ import { PageSEO } from "@/components/seo/PageSEO";
 import { generateMetadata } from "@/lib/seo";
 
 export const metadata = generateMetadata({
-  title: "UAE Billing Software for B2B Distributors | HexaBill",
+  title: "Billing & Inventory Software for UAE Distributors | HexaBill",
   description:
-    "Auto UAE VAT, credit aging, route sales, multi-branch P&L. HexaBill is built for Gulf distributors by a small team in Kerala, India.",
+    "Manage sales, inventory, customers, and payments in one system. HexaBill automates billing, inventory, and reports for Gulf distributors. Book a demo.",
   keywords: [
     "UAE billing software",
+    "billing and inventory software UAE",
     "VAT invoice software UAE",
     "B2B distribution software UAE",
     "billing software Dubai",
@@ -37,6 +40,8 @@ export default function HomePage() {
         <PainSection />
         <SolutionSection />
         <FeatureSection />
+        <BenefitsSection />
+        <AudienceSection />
         <RoleSection />
         <ProofSection />
         <PricingSection />

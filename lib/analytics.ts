@@ -36,4 +36,8 @@ export const track = {
     posthog.capture("location_page_viewed", { city }),
   featuresDetailCtaClicked: (slug: string, type: "demo" | "whatsapp") =>
     posthog.capture("features_detail_cta_clicked", { slug, type }),
+  benefitsSectionViewed: () =>
+    posthog.capture("benefits_section_viewed"),
+  audienceSectionViewed: () =>
+    posthog.capture("audience_section_viewed"),
 };

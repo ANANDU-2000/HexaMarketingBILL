@@ -12,8 +12,8 @@ export const rolesData = [
       "Low stock alerts — what to order before tomorrow's deliveries",
     ],
     close: "Peace of mind. From anywhere. At any time.",
-    cta: "See the owner dashboard →",
-    ctaHref: "#feature-dashboard",
+    cta: "See reports & profit →",
+    ctaHref: "#feature-reports",
   },
   {
     id: "admin",

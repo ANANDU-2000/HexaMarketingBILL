@@ -9,6 +9,7 @@ import {
   Building2,
   Clock,
   TrendingDown,
+  FileSpreadsheet,
 } from "lucide-react";
 import type { PainCard as PainCardType } from "@/content/en/pain.data";
 
@@ -21,6 +22,7 @@ const iconMap = {
   Building2,
   Clock,
   TrendingDown,
+  FileSpreadsheet,
 };
 
 interface PainCardProps {

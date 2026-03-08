@@ -7,20 +7,24 @@ import Link from "next/link";
 import {
   ShieldCheck,
   FileText,
-  LayoutDashboard,
   MapPin,
   Package,
-  Users,
+  Receipt,
+  Truck,
+  BarChart2,
+  Mail,
 } from "lucide-react";
 import { solutionPillars } from "@/content/en/solution.data";
 
 const iconMap = {
   ShieldCheck,
   FileText,
-  LayoutDashboard,
   MapPin,
   Package,
-  Users,
+  Receipt,
+  Truck,
+  BarChart2,
+  Mail,
 };
 
 export function SolutionSection() {
@@ -44,8 +48,9 @@ export function SolutionSection() {
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
           <p className="text-text-secondary text-base mt-6 max-w-[500px] mx-auto leading-relaxed">
-            One platform. Every invoice, route, credit, and dirham — tracked and
-            controlled in real time.
+            HexaBill automates your billing, inventory, and reports. One platform.
+            Every invoice, route, credit, and dirham — tracked and controlled in
+            real time.
           </p>
         </motion.div>
 
